@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="booking" type="bookingType"/>
+  <xs:complexType name="bookingdatesType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="checkin"/>
+      <xs:element type="xs:string" name="checkout"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bookingType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="firstname"/>
+      <xs:element type="xs:string" name="lastname"/>
+      <xs:element type="xs:string" name="totalprice"/>
+      <xs:element type="xs:string" name="depositpaid"/>
+      <xs:element type="bookingdatesType" name="bookingdates"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

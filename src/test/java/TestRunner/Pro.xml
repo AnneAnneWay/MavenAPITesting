@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestNG Group Test">
+    <test verbose="2" preserve-order="true" name="Pro">
+        <parameter name="url" value="https://restful-booker.herokuapp.com/booking/"/>
+        <parameter name="id" value="2"/>
+        <groups>
+            <run>
+                <include name="Pro"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="CreateBooking.createJSONBooking"/>
+            <class name="CreateBooking.createXMLBooking"/>
+            <class name="GetBooking.getJSONBooking"/>
+            <class name="GetBooking.getXMLBooking"/>
+            <class name="UpdateBooking.putJSONBooking"/>
+            <class name="UpdateBooking.putXMLBooking"/>
+            <class name="ValidateSchema.ValidateJSONSchema.validateJSONSchema"/>
+            <class name="ValidateSchema.ValidateXMLSchema.validateXMLSchema"/>
+        </classes>
+    </test>
+</suite>
